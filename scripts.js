@@ -56,6 +56,7 @@ window.onload = (event) => {
     })
 
     down.addEventListener('click', (event) => {
+        window.alert(vertPos);
         if(vertPos < 250) vertPos += 10;
         rocketImage.style.top = `${vertPos}px`;
         height -= 10000;
@@ -63,13 +64,19 @@ window.onload = (event) => {
     })
 
     left.addEventListener('click', (event) => {
+        window.alert(horiPos);
         if(horiPos > 160) horiPos -= 10;
         rocketImage.style.left = `${horiPos}px`;
+        height -= 10000;
+        shuttleHeight.innerHTML = height;
     })
 
     right.addEventListener('click', (event) => {
+        window.alert(horiPos);
         if(horiPos < 160) horiPos += 10;
         rocketImage.style.left = `${horiPos}px`;
+        height -= 10000;
+        shuttleHeight.innerHTML = height;
     })
 
   }; 
