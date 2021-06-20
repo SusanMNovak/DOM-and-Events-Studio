@@ -8,9 +8,9 @@ window.onload = (event) => {
     let height = 0;
     let shuttleHeight = document.getElementById('spaceShuttleHeight');
     let rocketImage = document.getElementById("rocket");
-    rocketImage.style.position= "relative";
-    rocketImage.style.top = '20px';
-    rocketImage.style.left = '20px';
+    rocketImage.style.position= "absolute";
+    rocketImage.style.bottom = '0px';
+    rocketImage.style.left = '220px';
     rocketImage.style.visibility='visible';
     const up = document.getElementById('up');
     const down = document.getElementById('down');
@@ -63,7 +63,7 @@ window.onload = (event) => {
     })
 
     left.addEventListener('click', (event) => {
-        if(horiPos > -160) horiPos -= 10;
+        if(horiPos > 160) horiPos -= 10;
         rocketImage.style.left = `${horiPos}px`;
     })
 
